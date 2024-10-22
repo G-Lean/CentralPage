@@ -1,25 +1,93 @@
-
+:root{
+    --background:rgba(0, 0, 0, 0.5);
+    --text-color:rgb(255, 255, 255);
+}
 body{
-    background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
-        url('./assets/hero.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: linear-gradient(to top, #a8ede94d 0%, #fed6e350 100%),
+    url('./assets/hero.webp');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 /* Estilos para el contenido principal */
 .main-content {
-    color: rgb(255, 255, 255);
+    color: var(--text-color);
     padding: 2rem; /* Agregar espacio alrededor del contenido */
     margin-top: 20px; /* Asegura que el texto esté separado del header */
     text-align: center; /* Centrar texto */
 }
-
+.main-container{
+    background-color: var(--background);
+}
 .title {
     font-size: 5rem; /* Ajustar el tamaño para que sea más pequeño y visible */
     margin-bottom: 1rem;
 }
 .description{
-    font-size: 4rem;
     text-decoration: solid;
+}
+.Introduction{
+    margin-top: 2rem;
+}
+
+.turismo{
+    background-color: var(--background);
+    color: var(--text-color);
+    text-align: center;
+    font-size: 2rem;
+}
+.flex-container{
+    display: flex;
+    
+}
+.flex-container .flex-text{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.flex-container .btn{
+    margin: 5rem;
+    color: aqua;
+    display: flex;
+    
+}
+.btn-a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 20px 50px;
+    position: relative;
+    margin: 12px;
+    border: 3px solid aqua;
+    color: aqua;
+}
+.btn-a::after,.btn-a::before{
+    border: 3px solid aqua;
+    content: "";
+    position: absolute;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: transform .3s ease;
+}
+.btn-a:hover::after{
+    transform: translate(-10px,-10px);
+}
+.btn-a:hover::before{
+    transform: translate(-10px,-10px);
+}
+.btn-a:hover{
+    color: rgb(157, 252, 220);
+}
+.turismo-img{
+    width: auto;
+    height: 100%;
+    margin: 0;
+}
+@media (max-width:768px) {
+    .flex-container {
+        flex-direction: column;
+    }
 }
 
