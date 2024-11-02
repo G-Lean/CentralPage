@@ -3,6 +3,7 @@
     --text-color:rgb(255, 255, 255);
 }
 body{
+    font-family: "Poppins", sans-serif;
     background-image: linear-gradient(to top, #a8ede94d 0%, #fed6e350 100%),
     url('../assets/distritos.webp');
     background-repeat:no-repeat;
@@ -21,10 +22,16 @@ body{
     background-color: var(--background);
 }
 .title {
-    font-size: 5rem; /* Ajustar el tamaño para que sea más pequeño y visible */
+    font-family: "Sansita", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem; 
     margin-bottom: 1rem;
 }
 .description{
+    font-family: "Sansita", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     text-decoration: solid;
 }
 .Introduction{
@@ -50,6 +57,9 @@ body{
     width: 300px;
     height: 200px;
 }
+.ignore{
+    cursor: auto;
+}
 .name{
     font-size: 30px;
     color: var(--text-color);
@@ -61,10 +71,10 @@ body{
 
 .Fernando{
     left: 5%;
-    top: 0;
+    top: -10px;
 }
 .Guambaré{
-    left: 28%;
+    left: 18%;
 }
 .Itá{
     left: 42%;
@@ -73,7 +83,32 @@ body{
     left: 0;
     top: -18%;
 }
-
+.Mariano{
+    left: 0;
+    top: -10px;
+}
+.Italia{
+    left: 25%;
+}
+.Antonio{
+    left: 25%;
+}
+.Ypacaraí{
+    left: 26%;
+}
+.Villeta{
+    top: 0;
+}
+.Lorenzo{
+    left: 20%;
+    top: 5%;
+}
+.Elisa{
+    left: 26%;
+}
+.gallery-description ,.gallery_Fundador ,.gallery_fecha{
+    display: none;
+}
 .over{
     position: absolute;
     top: 50%;
@@ -81,9 +116,141 @@ body{
     background-color: var(--background);
     width: 100%;
 }
+
+/*mostrar imagen*/
+.img-light{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--text-color);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0,0);
+    transition: transform .2s ease-in-out;
+    z-index: 110;
+}
+.main-img{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    left: 30%;
+    top: 20%;
+}
+.show{
+    transform: scale(1,1);
+}
+.agregar-imagen{
+    transform: scale(0);
+    transition: scale .3s .2s;
+}
+.show_image{
+    transform: scale(1);
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.close{
+    z-index: 210;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+/*Texto overlay*/
+.titulo-imagen{
+    color: var(--text-color);
+    text-align: center;
+}
+.meta-img{
+    position: absolute;
+    top: 10%;
+}
+.descripcion-imagen{
+    font-size: 20px;
+    position: absolute;
+    color: var(--text-color);
+    bottom: 25vh;
+    text-align: center;
+}
+.Ubi-container{
+    margin-left: 20px;
+}
+.Ubi-container h2{
+    text-align: center;
+}
+.img-ubicacion{
+    margin-top: 10px;
+    width: 300px;
+    height: 200px;
+    border-radius: 10%;
+}
 @media (max-width:916px) {
     .gallery {
         justify-content: center;
     }
+    .close{
+        right: 0;
+    }
+    .main-img{
+        top: 10px;
+    }
+    .meta-img{
+        align-items: center;
+        top: 35vh;
+        font-size: 80%;
+    }
+    .img-ubicacion{
+        margin: 0;
+        width: 200px;
+        height: 100px;
+    }
+    .Ubi-container{
+        margin-left: 0;
+    }
+    .Ubi-container h2{
+        font-size: 80%;
+    }
+    .show_image{
+        width: 200px;
+        height: 100px;
+    }
+    .titulo-imagen{
+        font-size: 80%;
+    }
+    .descripcion-imagen{
+        bottom: 6%;
+    }
 }
-
+@media (min-height:1024px){
+    .descripcion-imagen{
+        bottom: 20%;
+    }
+}
+footer{
+    background-color: rgb(44,44, 44);
+    color: rgb(134, 134, 134);
+    font-size: 25px;
+    box-shadow: 0 0 5rem #000;
+    padding:20px;
+}
+footer span{
+    font-family: "Bubblegum Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    transform: rotate(-4deg);
+    color:  rgb(44,44, 44);
+    
+   
+}
+footer div{
+    display: inline-block;
+    transform: rotate(2deg);
+    background-color: rgb(134, 134, 134);
+    border-radius: 10%;
+}

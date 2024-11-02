@@ -12,6 +12,7 @@ html, body {
 
 /* Ajuste del header */
 .hero {
+    font-family: "Poppins", sans-serif;
     background-size: cover;
     min-height: 100px; /* Reducir el mínimo del alto */
     height: auto; /* Ajustar el alto automáticamente */
@@ -21,8 +22,9 @@ html, body {
     justify-content: center; /* Centrar contenido horizontalmente */
 }
 .flag{
-    width: 200px;
-    height: 100px;
+    width: 170px;
+    height: 130px;
+    margin-left: 50px;
 }
 .container{
     background-color: rgba(0, 0, 0, 0.5);

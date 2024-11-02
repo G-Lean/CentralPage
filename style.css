@@ -9,6 +9,7 @@ body{
     background-size:cover;
     background-attachment: fixed;
     background-position: center;
+    font-family: "Poppins", sans-serif;
 }
 /* Estilos para el contenido principal */
 .main-content {
@@ -21,6 +22,9 @@ body{
     background-color: var(--background);
 }
 .title {
+    font-family: "Sansita", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 5rem; /* Ajustar el tamaño para que sea más pequeño y visible */
     margin-bottom: 1rem;
 }
@@ -84,6 +88,35 @@ body{
     width: auto;
     height: 100%;
     margin: 0;
+}
+
+/*Comentarios*/
+.comments{
+    background-color: rgba(0, 0, 0, 0.815);
+    color: var(--text-color);
+}
+footer{
+    background-color: rgb(44,44, 44);
+    color: rgb(134, 134, 134);
+    font-size: 25px;
+    box-shadow: 0 0 5rem #000;
+    padding:20px;
+}
+footer span{
+    font-family: "Bubblegum Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    transform: rotate(-4deg);
+    color:  rgb(44,44, 44);
+    
+   
+}
+footer div{
+    display: inline-block;
+    transform: rotate(2deg);
+    background-color: rgb(134, 134, 134);
+    border-radius: 10%;
 }
 @media (max-width:768px) {
     .flex-container {
