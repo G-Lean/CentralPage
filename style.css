@@ -1,6 +1,8 @@
 :root{
     --background:rgba(0, 0, 0, 0.5);
     --text-color:rgb(255, 255, 255);
+    --title-bg:#000000bd;
+    --title:rgb(229, 26, 63);
 }
 body{
     background-image: linear-gradient(to top, #a8ede94d 0%, #fed6e350 100%),
@@ -22,6 +24,8 @@ body{
     background-color: var(--background);
 }
 .title {
+    background-color:var(--title-bg);
+    color: var(--title);
     font-family: "Sansita", sans-serif;
     font-weight: 400;
     font-style: normal;
