@@ -4,11 +4,7 @@
     --background: #000000bd;
     --title:rgb(198 237 239)
 }
-body, html{
-    min-height: 100%;
-    height: 100%;
-    width: 100%;
-}
+
 body{
     background-image: linear-gradient(to top, #a8ede94d 0%, #fed6e350 100%),
     url('./assets/hero.webp');
@@ -109,7 +105,7 @@ body{
 .music-icon {
     position: absolute;
     top: 20px;
-    left: 20px;
+    left: 10px;
     font-size: 80px !important;
     cursor: pointer;
     transition: transform 0.2s ease;

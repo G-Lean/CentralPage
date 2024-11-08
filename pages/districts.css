@@ -240,7 +240,7 @@ body{
 .music-icon {
     position: absolute;
     top: 20px;
-    left: 20px;
+    left: 10px;
     font-size: 80px !important;
     cursor: pointer;
     transition: transform 0.2s ease;
