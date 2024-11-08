@@ -1,11 +1,11 @@
 :root{
-    --background: rgba(0, 0, 0, 0.5);
-    --title:rgb(229, 26, 63);
+    --background: #000000bd;
+    --title:rgb(198 237 239)
 }
 body {
     font-family: "Poppins", sans-serif;
     background-image: linear-gradient(to top, #b3f1ee4d 0%, #fdb5cc50 100%),
-    url("../assets/descarga.jpg");
+    url("../assets/Pomberito.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -13,6 +13,7 @@ body {
 
 }
 .main{
+    margin-top: 20px;
     display: flex;
     background-color: rgba(0, 0, 0, 0.5);
     color: rgb(255, 255, 255);
@@ -28,7 +29,7 @@ body {
 }
 
 .Antecedentes h2 {
-    background-color: #000000bd;
+    background-color: var(--background);
     width: 100%;
     color: var(--title);
     font-family: "Sansita", sans-serif;
@@ -50,7 +51,10 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
-
+.table-container img{
+    display: flex;
+    margin: 0 auto;
+}
 table {
     margin-top: 20px;
     width: 100%;
@@ -65,7 +69,7 @@ td {
 }
 
 th {
-    background-color:#000000bd;
+    background-color:var(--background);
     color: var(--title);
     font-size: 1.2em;
 }
@@ -75,7 +79,7 @@ td {
 }
 .category {
     font-weight: bold;
-    background-color: #000000bd;
+    background-color: var(--background);
     color: var(--title);
     text-transform: uppercase;
 }
@@ -89,8 +93,219 @@ td {
         width: 100%;
     }
 }
-footer {
+.gallery{
+    text-align: center;
+    background-color: var(--background);
+
+}
+.gallery .titu{
+    color: var(--title);
+    font-family: "Sansita", sans-serif;
+    font-size: 50px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+#slider {
+    margin: 0 auto;
+    width: 800px;
+    max-width: 100%;
+ }
+ #slider input[type=radio] {
+    display: none;
+ }
+ #slider label {
+    cursor:pointer;
+    text-decoration: none;
+ }
+ #slides {
+    padding: 10px;
+    border: 3px solid #ccc;
+    background-color: #003459;
+    position: relative;
+    z-index: 1;
+ }
+ #overflow {
+    width: 100%;
+    overflow: hidden;
+ }
+ #slide1:checked ~ #slides .inner {
+    margin-left: 0;
+ }
+ #slide2:checked ~ #slides .inner {
+    margin-left: -100%;
+ }
+ #slide3:checked ~ #slides .inner {
+    margin-left: -200%;
+ }
+ #slide4:checked ~ #slides .inner {
+    margin-left: -300%;
+ }
+ #slides .inner {
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    width: 400%;
+    line-height: 0;
+    height: 700px;
+ }
+ #slides .slide {
+    width: 25%;
+    float:left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #000000;
+ }
+ #slides .slide_1 {
+    background: url(../history-assets/Catedral-en-Itagua.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
+ }
+ #slides .slide_2 {
+    background: url(../history-assets/Conmebol-Luque.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
+ }
+ #slides .slide_3 {
+    background: url(../history-assets/El-peñón.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
+ }
+ #slides .slide_4 {
+    background: url(../history-assets/centro-de-nueva-italia.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
+ }
+ #controls {
+    margin: -400px 0 0 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    position: relative;
+ }
+ #controls label {
+    transition: opacity 0.2s ease-out;
+    display: none;
+    width: 120px;
+    height: 120px;
+    opacity: .4;
+ }
+ #controls label:hover {
+    opacity: 1;
+ }
+ #slide1:checked ~ #controls label:nth-child(2),
+ #slide2:checked ~ #controls label:nth-child(3),
+ #slide3:checked ~ #controls label:nth-child(4),
+ #slide4:checked ~ #controls label:nth-child(1) {
+    background-image: url(../assets/arrow.png);
+    background-repeat: no-repeat;
+    background-size: 120px;
+    float:right;
+    margin: 0 -120px 0 0;
+    display: block;
+    rotate: 180deg;
+ }
+#slide1:checked ~ #controls label:nth-last-child(1),
+#slide2:checked ~ #controls label:nth-last-child(4),
+#slide3:checked ~ #controls label:nth-last-child(3),
+#slide4:checked ~ #controls label:nth-last-child(2){
+    background: url(../assets/arrow.png) no-repeat;
+    background-size: 120px;
+    float: left; 
+    margin: 0 0 0 -120px;
+    display: block;
+}
+ #bullets {
+    margin: 400px 0 0;
+    text-align: center;
+ }
+ #bullets label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius:100%;
+    background: #ccc;
+    margin: 0 10px;
+ }
+ #slide1:checked ~ #bullets label:nth-child(1),
+ #slide2:checked ~ #bullets label:nth-child(2),
+ #slide3:checked ~ #bullets label:nth-child(3),
+ #slide4:checked ~ #bullets label:nth-child(4) {
+    background: #444;
+ }
+ #slides img{
+    width: 100%;
+    height: 100%;
+ }
+ .slide-content{
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+    font-size: 30px;
+    color: #fff;
+    align-items: flex-end;
+ }
+ 
+ .slide-content p{
+    background-color: var(--background);
+    padding: 20px;
+    margin-top: auto;
+ }
+ @media screen and (max-width: 900px) {
+    #slide1:checked ~ #controls label:nth-child(2),
+    #slide2:checked ~ #controls label:nth-child(3),
+    #slide3:checked ~ #controls label:nth-child(4),
+    #slide4:checked ~ #controls label:nth-child(1),
+    #slide1:checked ~ #controls label:nth-last-child(1),
+    #slide2:checked ~ #controls label:nth-last-child(4),
+    #slide3:checked ~ #controls label:nth-last-child(3),
+    #slide4:checked ~ #controls label:nth-last-child(2) {
+       margin: 0;
+       background-size: 60px;
+    }
+    #controls label {
+        width: 60px;
+        height: 60px;
+        
+     }
+    #slides {
+       max-width: calc(100% - 140px);
+       margin: 0 auto;
+    }
+    #slides .inner {
+        height: 400px;
+     }
+    #bullets {
+        margin: 230px 0 0;
+    }
+    #controls {
+            margin: -230px 0 0 0;
+    }
+    .slide-content{
+        font-size: 10px;
+    }
+        
+ }
+
+/* Musica */
+
+.music-icon {
     position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 80px !important;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    color: #333;
+    z-index: 200;
+}
+
+/* Efecto de "pop" cuando se reproduce la música */
+.music-icon.playing {
+    color: #ff4081; /* Cambia el color cuando está reproduciendo */
+    transform: scale(1.2); /* Aumenta un poco el tamaño */
+}
+
+footer {
     width: 100%;
     background-color: rgb(44, 44, 44);
     color: rgb(134, 134, 134);
@@ -115,4 +330,12 @@ footer div {
     transform: rotate(2deg);
     background-color: rgb(134, 134, 134);
     border-radius: 10%;
+}
+@media (max-width:940px) {
+    footer{
+        position: relative;
+    }
+    .music-icon{
+        font-size: 50px !important;
+       }
 }

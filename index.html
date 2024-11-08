@@ -19,16 +19,23 @@
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Parisienne&family=Sansita:ital,wght@0,700;1,900&display=swap');
         </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
+    <!-- Icono de Música -->
+    <span class="material-icons music-icon" id="musicIcon">music_note</span>
+    
+    <!-- Archivo de música -->
+    <audio id="musicAudio" src="../recuerdos de Ypacaraí.mp3" loop></audio>
+
+    <!-- Archivo de script JS -->
+    <script src="../musica.js"></script>
 <!--Header Start-->
     <header class="hero">
-
         <nav class="nav container" id="nav">
-            <h2 class="nav_logo"><a href="index.html"><img src="assets/logo-central.webp" class="flag"></img></a></h2>
-
+            <h2 class="nav_logo"><a href="index.html">
+                <img src="assets/logo-central.webp" class="flag"></img></a></h2>
             <ul class="nav_links">
-
                 <li class="nav_item">
                     <a href="index.html" class="nav_link">Inicio</a>
                 </li>
@@ -43,13 +50,10 @@
                 </li>
                 <li class="nav_item"></li>
                 </li>
-
             </ul>
-
             <a href="#nav" class="nav_hamburguer">
                 <img src="./assets/menu.svg" class="nav_icon">
             </a>
-
             <a href="#" class="nav_close">
                 <img src="./assets/close.svg" class="navicon">
             </a>
@@ -80,11 +84,11 @@
                 actualizados y visualmente organizados, promoviendo el conocimiento de esta 
                 importante región y fomentando el turismo local.</p>
             <div class="btn">  
-            <a class="btn-a" href="#">Click aquí</a>
+            <a class="btn-a" href="pages/history.html">Click aquí</a>
              </div>  
             </div>
             <div class="turismo-img">
-            <img src="assets/Turismo.webp" alt="Pantanal del Chaco">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/e-OD_gvDqBw?si=2PvSJRFfe1trpZ2X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
         </div>

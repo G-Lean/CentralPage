@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <title>Contactanos</title>
     <link rel="stylesheet" href="../header.css">
     <link rel="stylesheet" href="../Normalize/normalize.css">
     <link rel="stylesheet" href="contact.css">
@@ -16,8 +16,17 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Parisienne&family=Sansita:ital,wght@0,700;1,900&display=swap');
     </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
+    <!-- Icono de Música -->
+    <span class="material-icons music-icon" id="musicIcon">music_note</span>
+    
+    <!-- Archivo de música -->
+    <audio id="musicAudio" src="../recuerdos de Ypacaraí.mp3" loop></audio>
+
+    <!-- Archivo de script JS -->
+    <script src="../musica.js"></script>
     <!--Header Start-->
     <header class="hero">
 
@@ -36,7 +45,7 @@
                     <a href="districts.html" class="nav_link">Distritos</a>
                 </li>
                 <li class="nav_item">
-                    <a href="contact.html" class="nav_link">Contacto</a>
+                    <a href="contact.html" class="nav_link">Contactanos</a>
                 </li>
                 <li class="nav_item"></li>
                 </li>
@@ -54,20 +63,21 @@
         </nav>
     </header>
     <!--Header End-->
-    <!-- modify this form HTML and place wherever you want your form -->
-<footer>
-    <h3>2do <div><span>ICA</span></div> </h3>
-</footer>
+
 <section class="form">
     <form
     action="https://formspree.io/f/xqakedjk"
 method="POST">
     <h5>Envia un mensaje</h5>
     <input class="controls" type="email" name="usuario" value="" placeholder="Email" required>
+    <input class="controls" type="text" name="departamento" value="" placeholder="¿Haz visitado algún departamento de central?">
     <textarea  class="controls" name="mensage" placeholder="Escribe tu mensaje" required></textarea>
     <input class="buttons" type="submit" name="" value="Enviar">
     <p>Contactate con nosotros</p>
     </form>
   </section>
+  <footer>
+    <h3>2do <div><span>ICA</span></div> </h3>
+</footer>
 </body>
 </html>

@@ -1,13 +1,13 @@
 :root{
     --background:rgba(0, 0, 0, 0.5);
     --text-color:rgb(255, 255, 255);
-    --title-bg:#000000bd;
-    --title:rgb(229, 26, 63);
+    --background: #000000bd;
+    --title:rgb(198 237 239)
 }
 body{
     font-family: "Poppins", sans-serif;
     background-image: linear-gradient(to top, #a8ede94d 0%, #fed6e350 100%),
-    url('../assets/distritos.webp');
+    url('../assets/descarga.jpg');
     background-repeat:no-repeat;
     background-size:cover;
     background-attachment: fixed;
@@ -235,26 +235,59 @@ body{
         bottom: 20%;
     }
 }
-footer{
-    background-color: rgb(44,44, 44);
+/* Musica */
+
+.music-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 80px !important;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    color: #333;
+    z-index: 200;
+}
+
+/* Efecto de "pop" cuando se reproduce la música */
+.music-icon.playing {
+    color: #ff4081; /* Cambia el color cuando está reproduciendo */
+    transform: scale(1.2); /* Aumenta un poco el tamaño */
+}
+
+footer {
+    width: 100%;
+    background-color: rgb(44, 44, 44);
     color: rgb(134, 134, 134);
     font-size: 25px;
     box-shadow: 0 0 5rem #000;
-    padding:20px;
+    padding: 20px;
 }
-footer span{
+
+footer span {
     font-family: "Bubblegum Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 40px;
     transform: rotate(-4deg);
-    color:  rgb(44,44, 44);
-    
-   
+    color: rgb(44, 44, 44);
+
+
 }
-footer div{
+
+footer div {
     display: inline-block;
     transform: rotate(2deg);
     background-color: rgb(134, 134, 134);
     border-radius: 10%;
+}
+@media (min-height:1310px) {
+    footer{
+        position: absolute;
+        bottom: 0;
+    }
+}
+@media (max-width:940px) {
+    footer{
+        position: relative;
+    }
 }

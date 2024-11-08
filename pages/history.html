@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../header.css">
     <link rel="stylesheet" href="../Normalize/normalize.css">
     <link rel="stylesheet" href="history.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     </style>
@@ -16,9 +17,20 @@
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Parisienne&family=Sansita:ital,wght@0,700;1,900&display=swap');
         </style>
+       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 </head>
 <body>
+     <!-- Icono de Música -->
+     <span class="material-icons music-icon" id="musicIcon">music_note</span>
+    
+     <!-- Archivo de música -->
+     <audio id="musicAudio" src="../recuerdos de Ypacaraí.mp3" loop></audio>
+ 
+     <!-- Archivo de script JS -->
+     <script src="../musica.js"></script>
     <!--Header Start-->
+    
     <header class="hero">
 
         <nav class="nav container" id="nav">
@@ -71,7 +83,7 @@
             pueblos formados alrededor de las capillas o parroquias, como Capiatá e Itaguá,  los constituidos por las
              estancias jesuíticas como San Lorenzo de Campo Grande.
         </p>        
-        <img src="../assets/Capiatá.webp" class="row"> 
+        <img src="../history-assets/Guitar.webp" class="row" height="500px" width="400px"> 
         <p>y ya entre el fin del siglo XIX y el XX, 
             los que se iniciaron como colonias agrícolas: agrícolas Nueva Italia, Colonia Thompson y Villa Elisa, 
             Esta concentración se debió en parte a la sangrienta resistencia de los indios chaqueños, 
@@ -108,11 +120,58 @@
             
           </tbody>
         </table>
-        <img src="../assets/descarga.jpg">
+        <img src="../history-assets/distritcs.webp" height="400px" width="500px">
       </div>
-      
     </article>
-    
+    <!--slider-->
+    <section class="gallery">
+      <h2 class="titu">Galeria de Imagenes</h2>
+      <div id="slider">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+        <div id="slides">
+           <div id="overflow">
+              <div class="inner">
+                 <div class="slide slide_1">
+                    <div class="slide-content">
+                       <p>Catedral de Itagua</p>
+                    </div>
+                 </div>
+                 <div class="slide slide_2">
+                    <div class="slide-content">
+                       <p>CONMEBOL en Luque</p>
+                    </div>
+                 </div>
+                 <div class="slide slide_3">
+                    <div class="slide-content">
+                       <p class="Limpio">Castillo del Peñón en Limpio</p>
+                    </div>
+                 </div>
+                 <div class="slide slide_4">
+                    <div class="slide-content">
+                       <p>Centro de Nueva Italia</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div id="controls">
+           <label for="slide1"></label>
+           <label for="slide2"></label>
+           <label for="slide3"></label>
+           <label for="slide4"></label>
+        </div>
+        <div id="bullets">
+           <label for="slide1"></label>
+           <label for="slide2"></label>
+           <label for="slide3"></label>
+           <label for="slide4"></label>
+        </div>
+     </div>
+  </section>
+    <!--end-slider-->
     <!--Footer-->
     <footer>
         <h3>2do <div><span>ICA</span></div> </h3>
